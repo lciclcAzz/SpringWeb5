@@ -98,6 +98,7 @@ var nAgt = navigator.userAgent;
 
 </head>
 <body>
+	<form:form id="form1" method="POST"	action="${contextPath}/form1"	commandName="form1">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -151,5 +152,29 @@ var nAgt = navigator.userAgent;
             </div>
        </div>
 ${myModel}
+<input type="submit" value="ok" />
+									<div class="demo_jui">
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="example">
+	<thead>
+		<tr>
+			<th width="8%">เวลาเริ่มต้น</th>
+			<th width="8%">เวลาสิ้นสุด</th>
+			<th width="14%">ประเภท</th>
+
+		</tr>
+	</thead>
+	<tbody>
+
+
+	</tbody>
+</table>
+	    ${form1.form1List}
+			</div>
+	<div id="dialog" title="Message" style="display: none">
+		<div id="message"></div>
+	</div>
+	<div class="log" style="display: none"></div>
+	<div id='msgbox' title='' style='display:none'></div>
+</form:form>
 </body>
 </html>
