@@ -164,7 +164,15 @@ ${myModel}
 		</tr>
 	</thead>
 	<tbody>
-
+	    <c:if test="${fn:length(form1.form1al) > 0}" >
+	    	<c:forEach items="${form1.form1al}" var="form1Load" varStatus="loop">
+	    	<tr >
+				<td><c:out value="${form1Load.ProductCode}"/></td>
+				<td class="center"></td>
+				<td class="left"></td>
+			</tr>
+	    	</c:forEach>
+	    </c:if>
 
 	</tbody>
 </table>

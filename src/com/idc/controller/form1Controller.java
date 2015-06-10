@@ -29,11 +29,14 @@ public class form1Controller {
 	
 		String dateFrom =Tools.chkNull(form1.getDateFrom());
 		String dateTo 	=Tools.chkNull(form1.getDateTo()); 
-		RtnForm1.setForm1List(form1Service.getForm1All("01-01-2558", "31-12-2558"));
+//		RtnForm1.setForm1List(form1Service.getForm1All("01-01-2558", "31-12-2558"));
+		RtnForm1.setForm1al(form1Service.getForm1All("01-01-2558", "31-12-2558"));
 		
 		RtnForm1.setDateFrom(dateFrom);
 		RtnForm1.setDateTo(dateTo);
+		
 		model.addAttribute("form1", RtnForm1);
+		
 		return "/index";
 	}
 
