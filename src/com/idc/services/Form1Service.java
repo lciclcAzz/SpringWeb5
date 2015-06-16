@@ -14,7 +14,7 @@ public class Form1Service {
 	private static final Logger logger = LoggerFactory.getLogger(Form1Service.class);
 
 	@SuppressWarnings("finally")
-	public  ArrayList<GoodsInfo> getForm1All(String dateFrom ,String dateTo) {
+	public  ArrayList<GoodsInfo> getForm1All() {
 		Gson gson = new Gson();
 		List<GoodsInfo>  form1List = new ArrayList<GoodsInfo>();
 		ArrayList<GoodsInfo>  form1al = new ArrayList<GoodsInfo>();

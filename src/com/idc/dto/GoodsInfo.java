@@ -4,215 +4,222 @@ import java.io.Serializable;
 
 public class GoodsInfo implements Serializable{
 	 	private static final long serialVersionUID =1L;
-    private String ProductCode = null;
-    private String GroupId = null;
-    private String DutyCode = null;
-    private String TypeCode = null;
-    private String SubTypeCode = null;
-    private String BrandMainCode = null;
-    private String BrandMainDesc_TH = null;
-    private String BrandMainDesc_EN = null;
-    private String BrandSecondCode = null;
-    private String BrandSecondDesc_TH = null;
-    private String BrandSecondDesc_EN = null;
-    private String ModelCode = null;
-    private String ModelDesc = null;
-    private String SizeCode = null;
-    private String SizeDesc = null;
-    private String PackageCode = null;
-    private String PackageDesc = null;
-    private String UnitCode = null; 
-    private String UnitDesc = null;
-    private String DegreeCode= null;
-    private String DegreeDesc = null;
-    private String DegreeMax = null;
-    private String DegreeMin = null;
+    private String productCode = null;
+    private String groupId = null;
+    private String dutyCode = null;
+    private String typeCode = null;
+    private String subTypeCode = null;
+    private String brandMainCode = null;
+    private String brandMainDesc_TH = null;
+    private String brandMainDesc_EN = null;
+    private String brandSecondCode = null;
+    private String brandSecondDesc_TH = null;
+    private String brandSecondDesc_EN = null;
+    private String modelCode = null;
+    private String modelDesc = null;
+    private String sizeCode = null;
+    private String sizeDesc = null;
+    private String packageCode = null;
+    private String packageDesc = null;
+    private String unitCode = null; 
+    private String unitDesc = null;
+    private String degreeCode= null;
+    private String degreeDesc = null;
+    private String degreeMax = null;
+    private String degreeMin = null;
     
     public GoodsInfo(){
         
     }
 
-    public void setProductCode(String ProductCode) {
-        this.ProductCode = ProductCode;
-    }
 
-    public String getProductCode() {
-        return ProductCode;
-    }
 
-    public void setGroupId(String GroupId) {
-        this.GroupId = GroupId;
-    }
 
-    public String getGroupId() {
-        return GroupId;
-    }
+	public String getGroupId() {
+		return groupId;
+	}
 
-    public void setDutyCode(String DutyCode) {
-        this.DutyCode = DutyCode;
-    }
+	public void setGroupId(String groupId) {
+		this.groupId = groupId;
+	}
 
-    public String getDutyCode() {
-        return DutyCode;
-    }
+	public String getDutyCode() {
+		return dutyCode;
+	}
 
-    public void setTypeCode(String TypeCode) {
-        this.TypeCode = TypeCode;
-    }
+	public void setDutyCode(String dutyCode) {
+		this.dutyCode = dutyCode;
+	}
 
-    public String getTypeCode() {
-        return TypeCode;
-    }
+	public String getTypeCode() {
+		return typeCode;
+	}
 
-    public void setSubTypeCode(String SubTypeCode) {
-        this.SubTypeCode = SubTypeCode;
-    }
+	public void setTypeCode(String typeCode) {
+		this.typeCode = typeCode;
+	}
 
-    public String getSubTypeCode() {
-        return SubTypeCode;
-    }
+	public String getSubTypeCode() {
+		return subTypeCode;
+	}
 
-    public void setBrandMainCode(String BrandMainCode) {
-        this.BrandMainCode = BrandMainCode;
-    }
+	public void setSubTypeCode(String subTypeCode) {
+		this.subTypeCode = subTypeCode;
+	}
 
-    public String getBrandMainCode() {
-        return BrandMainCode;
-    }
+	public String getBrandMainCode() {
+		return brandMainCode;
+	}
 
-    public void setBrandMainDesc_TH(String BrandMainDesc_TH) {
-        this.BrandMainDesc_TH = BrandMainDesc_TH;
-    }
+	public void setBrandMainCode(String brandMainCode) {
+		this.brandMainCode = brandMainCode;
+	}
 
-    public String getBrandMainDesc_TH() {
-        return BrandMainDesc_TH;
-    }
+	public String getBrandMainDesc_TH() {
+		return brandMainDesc_TH;
+	}
 
-    public void setBrandMainDesc_EN(String BrandMainDesc_EN) {
-        this.BrandMainDesc_EN = BrandMainDesc_EN;
-    }
+	public void setBrandMainDesc_TH(String brandMainDesc_TH) {
+		this.brandMainDesc_TH = brandMainDesc_TH;
+	}
 
-    public String getBrandMainDesc_EN() {
-        return BrandMainDesc_EN;
-    }
+	public String getBrandMainDesc_EN() {
+		return brandMainDesc_EN;
+	}
 
-    public void setBrandSecondCode(String BrandSecondCode) {
-        this.BrandSecondCode = BrandSecondCode;
-    }
+	public void setBrandMainDesc_EN(String brandMainDesc_EN) {
+		this.brandMainDesc_EN = brandMainDesc_EN;
+	}
 
-    public String getBrandSecondCode() {
-        return BrandSecondCode;
-    }
+	public String getBrandSecondCode() {
+		return brandSecondCode;
+	}
 
-    public void setBrandSecondDesc_TH(String BrandSecondDesc_TH) {
-        this.BrandSecondDesc_TH = BrandSecondDesc_TH;
-    }
+	public void setBrandSecondCode(String brandSecondCode) {
+		this.brandSecondCode = brandSecondCode;
+	}
 
-    public String getBrandSecondDesc_TH() {
-        return BrandSecondDesc_TH;
-    }
+	public String getBrandSecondDesc_TH() {
+		return brandSecondDesc_TH;
+	}
 
-    public void setBrandSecondDesc_EN(String BrandSecondDesc_EN) {
-        this.BrandSecondDesc_EN = BrandSecondDesc_EN;
-    }
+	public void setBrandSecondDesc_TH(String brandSecondDesc_TH) {
+		this.brandSecondDesc_TH = brandSecondDesc_TH;
+	}
 
-    public String getBrandSecondDesc_EN() {
-        return BrandSecondDesc_EN;
-    }
+	public String getBrandSecondDesc_EN() {
+		return brandSecondDesc_EN;
+	}
 
-    public void setModelCode(String ModelCode) {
-        this.ModelCode = ModelCode;
-    }
+	public void setBrandSecondDesc_EN(String brandSecondDesc_EN) {
+		this.brandSecondDesc_EN = brandSecondDesc_EN;
+	}
 
-    public String getModelCode() {
-        return ModelCode;
-    }
+	public String getModelCode() {
+		return modelCode;
+	}
 
-    public void setModelDesc(String ModelDesc) {
-        this.ModelDesc = ModelDesc;
-    }
+	public void setModelCode(String modelCode) {
+		this.modelCode = modelCode;
+	}
 
-    public String getModelDesc() {
-        return ModelDesc;
-    }
+	public String getModelDesc() {
+		return modelDesc;
+	}
 
-    public void setSizeCode(String SizeCode) {
-        this.SizeCode = SizeCode;
-    }
+	public void setModelDesc(String modelDesc) {
+		this.modelDesc = modelDesc;
+	}
 
-    public String getSizeCode() {
-        return SizeCode;
-    }
+	public String getSizeCode() {
+		return sizeCode;
+	}
 
-    public void setSizeDesc(String SizeDesc) {
-        this.SizeDesc = SizeDesc;
-    }
+	public void setSizeCode(String sizeCode) {
+		this.sizeCode = sizeCode;
+	}
 
-    public String getSizeDesc() {
-        return SizeDesc;
-    }
+	public String getSizeDesc() {
+		return sizeDesc;
+	}
 
-    public void setPackageCode(String PackageCode) {
-        this.PackageCode = PackageCode;
-    }
+	public void setSizeDesc(String sizeDesc) {
+		this.sizeDesc = sizeDesc;
+	}
 
-    public String getPackageCode() {
-        return PackageCode;
-    }
+	public String getPackageCode() {
+		return packageCode;
+	}
 
-    public void setPackageDesc(String PackageDesc) {
-        this.PackageDesc = PackageDesc;
-    }
+	public void setPackageCode(String packageCode) {
+		this.packageCode = packageCode;
+	}
 
-    public String getPackageDesc() {
-        return PackageDesc;
-    }
+	public String getPackageDesc() {
+		return packageDesc;
+	}
 
-    public void setUnitCode(String UnitCode) {
-        this.UnitCode = UnitCode;
-    }
+	public void setPackageDesc(String packageDesc) {
+		this.packageDesc = packageDesc;
+	}
 
-    public String getUnitCode() {
-        return UnitCode;
-    }
+	public String getUnitCode() {
+		return unitCode;
+	}
 
-    public void setUnitDesc(String UnitDesc) {
-        this.UnitDesc = UnitDesc;
-    }
+	public void setUnitCode(String unitCode) {
+		this.unitCode = unitCode;
+	}
 
-    public String getUnitDesc() {
-        return UnitDesc;
-    }
+	public String getUnitDesc() {
+		return unitDesc;
+	}
 
-    public void setDegreeCode(String DegreeCode) {
-        this.DegreeCode = DegreeCode;
-    }
+	public void setUnitDesc(String unitDesc) {
+		this.unitDesc = unitDesc;
+	}
 
-    public String getDegreeCode() {
-        return DegreeCode;
-    }
+	public String getDegreeCode() {
+		return degreeCode;
+	}
 
-    public void setDegreeDesc(String DegreeDesc) {
-        this.DegreeDesc = DegreeDesc;
-    }
+	public void setDegreeCode(String degreeCode) {
+		this.degreeCode = degreeCode;
+	}
 
-    public String getDegreeDesc() {
-        return DegreeDesc;
-    }
+	public String getDegreeDesc() {
+		return degreeDesc;
+	}
 
-    public void setDegreeMax(String DegreeMax) {
-        this.DegreeMax = DegreeMax;
-    }
+	public void setDegreeDesc(String degreeDesc) {
+		this.degreeDesc = degreeDesc;
+	}
 
-    public String getDegreeMax() {
-        return DegreeMax;
-    }
+	public String getDegreeMax() {
+		return degreeMax;
+	}
 
-    public void setDegreeMin(String DegreeMin) {
-        this.DegreeMin = DegreeMin;
-    }
+	public void setDegreeMax(String degreeMax) {
+		this.degreeMax = degreeMax;
+	}
 
-    public String getDegreeMin() {
-        return DegreeMin;
-    }
+	public String getDegreeMin() {
+		return degreeMin;
+	}
+
+	public void setDegreeMin(String degreeMin) {
+		this.degreeMin = degreeMin;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	public String getProductCode() {
+		return productCode;
+	}
+	public void setProductCode(String productCode) {
+		this.productCode = productCode;
+	}
+
+
 }

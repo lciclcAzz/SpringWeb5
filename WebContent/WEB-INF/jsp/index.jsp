@@ -9,6 +9,7 @@
 <meta content="no-cache" http-equiv="Cache-Control">
 <meta content="0" http-equiv="Expires">
 <%@ include file="include.jsp" %>
+<script type='text/javascript' src='<c:url value="/resources/js/idc/form1.js"/>' ></script>
 <script>
 	function begin(){		
 		var viewportwidth;
@@ -98,21 +99,9 @@ var nAgt = navigator.userAgent;
 
 </head>
 <body>
-	<form:form id="form1" method="POST"	action="${contextPath}/form1"	commandName="form1">
+	<form:form id="form1" method="GET"	action="${contextPath}/form1"	commandName="form1">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3>Row 1 :: Col-md-6</h3>
-                        </div>
-                        <div class="panel-body">
-                            <p>...</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+           
             <div class ="row">
                 <table class="table table-hover table-bordered table-responsive table-striped">
                     <thead>
@@ -124,25 +113,25 @@ var nAgt = navigator.userAgent;
                     </thead>
                     <tbody>
                         <tr class="success">
-                            <td>..</td>
+                            <td id="prdCode0">..</td>
                             <td>.....</td>
                             <td>.....</td>
                             <td>.....</td>
                         </tr>
                         <tr class="info">
-                            <td>.....</td>
+                            <td id="prdCode1">.....</td>
                             <td>.....</td>
                             <td>.....</td>
                             <td>.....</td>
                         </tr>
                         <tr class="active">
                             <td>active</td>
-                            <td>.....</td>
+                            <td id="prdCode">.....</td>
                             <td>.....</td>
                             <td>.....</td>
                         </tr>
                         <tr class="warning">
-                            <td>.....</td>
+                            <td id="brandMain">.....</td>
                             <td>.....</td>
                             <td>.....</td>
                             <td>.....</td>
@@ -153,6 +142,7 @@ var nAgt = navigator.userAgent;
        </div>
 ${myModel}
 <input type="submit" value="ok" />
+<input type="button" value="GetData" name="btnGetData" id="btnGetData" />
 									<div class="demo_jui">
 <table cellpadding="0" cellspacing="0" border="0" class="display" id="example">
 	<thead>
@@ -160,15 +150,14 @@ ${myModel}
 			<th width="8%">เวลาเริ่มต้น</th>
 			<th width="8%">เวลาสิ้นสุด</th>
 			<th width="14%">ประเภท</th>
-
 		</tr>
 	</thead>
 	<tbody>
 	    <c:if test="${fn:length(form1.form1al) > 0}" >
 	    	<c:forEach items="${form1.form1al}" var="form1Load" varStatus="loop">
 	    	<tr >
-				<td><c:out value="${form1Load.ProductCode}"/></td>
-				<td class="center"></td>
+				<td><c:out value="${form1Load.productCode}"/></td>
+				<td class="center"><c:out value="${form1Load.brandMainCode}"/></td>
 				<td class="left"></td>
 			</tr>
 	    	</c:forEach>
@@ -183,6 +172,16 @@ ${myModel}
 	</div>
 	<div class="log" style="display: none"></div>
 	<div id='msgbox' title='' style='display:none'></div>
+	<div class="modal hide" id="pleaseWaitDialog" data-backdrop="static" data-keyboard="false">
+        <div class="modal-header">
+            <h1>Processing...</h1>
+        </div>
+        <div class="modal-body">
+            <div class="progress progress-striped active">
+                <div class="bar" style="width: 100%;"></div>
+            </div>
+        </div>
+    </div>
 </form:form>
 </body>
 </html>
