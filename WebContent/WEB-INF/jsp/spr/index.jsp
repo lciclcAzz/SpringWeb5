@@ -96,7 +96,41 @@ var nAgt = navigator.userAgent;
 }
 
 </script>
+<style type="text/css">
+#preloader  {
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color:#000;
+     opacity:0.4;
+     filter: alpha(opacity=40); /* For IE8 and earlier */
+     z-index: 99;
+    height: 100%;
+ }
 
+#status  {
+     width: 200px;
+     height: 200px;
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     background-image: url(./resources/images/loading2.gif);
+     background-repeat: no-repeat;
+     background-position: center;
+     margin: -100px 0 0 -100px;
+ }
+</style>
+<script type="text/javascript">
+// makes sure the whole site is loaded
+jQuery(window).load(function() {
+        // will first fade out the loading animation
+	jQuery("#status").fadeOut();
+        // will fade out the whole DIV that covers the website.
+	jQuery("#preloader").delay(500).fadeOut("slow");
+})
+</script>
 </head>
 <body>
 	<form:form id="form1" method="GET"	action="${contextPath}/form1"	commandName="form1">
@@ -172,16 +206,9 @@ ${myModel}
 	</div>
 	<div class="log" style="display: none"></div>
 	<div id='msgbox' title='' style='display:none'></div>
-	<div class="modal hide" id="pleaseWaitDialog" data-backdrop="static" data-keyboard="false">
-        <div class="modal-header">
-            <h1>Processing...</h1>
-        </div>
-        <div class="modal-body">
-            <div class="progress progress-striped active">
-                <div class="bar" style="width: 100%;"></div>
-            </div>
-        </div>
-    </div>
+	<div id="preloader">
+	  <div id="status">&nbsp;</div>
+	</div>
 </form:form>
 </body>
 </html>

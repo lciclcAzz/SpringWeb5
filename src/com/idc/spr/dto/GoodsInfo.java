@@ -1,4 +1,4 @@
-package com.idc.dto;
+package com.idc.spr.dto;
 
 import java.io.Serializable;
 

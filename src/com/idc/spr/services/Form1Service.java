@@ -1,4 +1,4 @@
-package com.idc.services;
+package com.idc.spr.services;
 
 
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.gson.Gson;
-import com.idc.dto.GoodsInfo;
+import com.idc.spr.dto.GoodsInfo;
 
 public class Form1Service {
 	private static final Logger logger = LoggerFactory.getLogger(Form1Service.class);

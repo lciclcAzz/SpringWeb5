@@ -1,10 +1,10 @@
-package com.idc.form;
+package com.idc.spr.form;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.idc.dto.GoodsInfo;
+import com.idc.spr.dto.GoodsInfo;
 
 public class form1 implements Serializable{
 	private static final long serialVersionUID =1L;

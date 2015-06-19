@@ -1,4 +1,4 @@
-package com.idc.controller;
+package com.idc.spr.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

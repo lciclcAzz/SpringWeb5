@@ -34,11 +34,11 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.idc.controller">
-		<context:include-filter type="regex" expression="com.idc.controller.*"/>
+	<context:component-scan base-package="com.idc.spr.controller">
+		<context:include-filter type="regex" expression="com.idc.spr.controller.*"/>
 	</context:component-scan>
-	<context:component-scan base-package="com.idc.services">
-		<context:include-filter type="regex" expression="com.idc.services.*"/>
+	<context:component-scan base-package="com.idc.spr.services">
+		<context:include-filter type="regex" expression="com.idc.spr.services.*"/>
 	</context:component-scan>
 	
 	

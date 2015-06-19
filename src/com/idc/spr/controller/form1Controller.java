@@ -1,4 +1,4 @@
-package com.idc.controller;
+package com.idc.spr.controller;
 import java.util.ArrayList;
 
 import javax.servlet.http.HttpSession;
@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.support.SessionStatus;
 
 import com.google.gson.Gson;
-import com.idc.dto.GoodsInfo;
-import com.idc.form.form1;
-import com.idc.services.Form1Service;
+import com.idc.spr.dto.GoodsInfo;
+import com.idc.spr.form.form1;
+import com.idc.spr.services.Form1Service;
 import com.idc.utils.Tools;
 
 @Controller
@@ -45,7 +45,7 @@ public class form1Controller {
 		RtnForm1.setDateTo(dateTo);
 //		model.addAttribute("form1", RtnForm1);
 		model.addAttribute("form1", RtnForm1);
-	   return "/index";
+	   return "spr/index";
    }
     
 	@RequestMapping(method = RequestMethod.POST)
@@ -62,7 +62,7 @@ public class form1Controller {
 		rtnForm1.setDateTo(dateTo);
 //		model.addAttribute("form1", RtnForm1);
 		
-		return "/index";
+		return "spr/index";
 	}
 	@RequestMapping(value="getData",  method=RequestMethod.GET, produces={"application/json; charset=TIS-620"})
 	public @ResponseBody String getData(@RequestParam  String id) {

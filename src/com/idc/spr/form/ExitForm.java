@@ -1,4 +1,4 @@
-package com.idc.form;
+package com.idc.spr.form;
 
 public class ExitForm {
 	private String flag="";

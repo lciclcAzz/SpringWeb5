@@ -1,4 +1,4 @@
-package com.idc.controller;
+package com.idc.spr.controller;
 
 import javax.servlet.http.*;
 
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.support.SessionStatus;
 
 
-import com.idc.form.ExitForm;
+import com.idc.spr.form.ExitForm;
 import com.idc.utils.Tools;
 
 @Controller
