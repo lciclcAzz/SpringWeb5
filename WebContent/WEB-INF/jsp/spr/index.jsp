@@ -94,7 +94,13 @@ var nAgt = navigator.userAgent;
 
     }
 }
-
+	// makes sure the whole site is loaded
+	jQuery(window).load(function() {
+	        // will first fade out the loading animation
+		jQuery("#status").fadeOut();
+	        // will fade out the whole DIV that covers the website.
+		jQuery("#preloader").delay(500).fadeOut("slow");
+	});
 </script>
 <style type="text/css">
 #preloader  {
@@ -122,18 +128,9 @@ var nAgt = navigator.userAgent;
      margin: -100px 0 0 -100px;
  }
 </style>
-<script type="text/javascript">
-// makes sure the whole site is loaded
-jQuery(window).load(function() {
-        // will first fade out the loading animation
-	jQuery("#status").fadeOut();
-        // will fade out the whole DIV that covers the website.
-	jQuery("#preloader").delay(500).fadeOut("slow");
-})
-</script>
 </head>
 <body>
-	<form:form id="form1" method="GET"	action="${contextPath}/form1"	commandName="form1">
+	<form:form id="form1" method="POST"	action="${contextPath}/productForm"	commandName="form1">
         <div class="container">
            
             <div class ="row">
@@ -174,7 +171,7 @@ jQuery(window).load(function() {
                 </table>            	
             </div>
        </div>
-${myModel}
+${productForm}
 <input type="submit" value="ok" />
 <input type="button" value="GetData" name="btnGetData" id="btnGetData" />
 									<div class="demo_jui">
@@ -193,6 +190,27 @@ ${myModel}
 				<td><c:out value="${form1Load.productCode}"/></td>
 				<td class="center"><c:out value="${form1Load.brandMainCode}"/></td>
 				<td class="left"></td>
+			</tr>
+	    	</c:forEach>
+	    </c:if>
+
+	</tbody>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="example2">
+	<thead>
+		<tr>
+			<th width="8%">เวลาเริ่มต้น</th>
+			<th width="8%">เวลาสิ้นสุด</th>
+			<th width="14%">ประเภท</th>
+		</tr>
+	</thead>
+	<tbody>
+	    <c:if test="${fn:length(productForm.al) > 0}" >
+	    	<c:forEach items="${productForm.al}" var="form1" varStatus="loop">
+	    	<tr >
+				<td><c:out value="${form1.productId}"/></td>
+				<td class="center"><c:out value="${form1.productName}"/></td>
+				<td class="left"><c:out value="${form1.priceSale}"/></td>
 			</tr>
 	    	</c:forEach>
 	    </c:if>

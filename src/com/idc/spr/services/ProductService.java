@@ -1,5 +1,6 @@
 package com.idc.spr.services;
 
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,25 +8,39 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.gson.Gson;
+import com.idc.spr.ProductBean;
 import com.idc.spr.dto.GoodsInfo;
+import com.idc.spr.form.ProductForm;
+import com.idc.utils.conDB;
 
 public class ProductService {
 	private static final Logger logger = LoggerFactory.getLogger(ProductService.class);
 
 	@SuppressWarnings("finally")
-	public  ArrayList<GoodsInfo> getForm1All() {
-		Gson gson = new Gson();
-		List<GoodsInfo>  form1List = new ArrayList<GoodsInfo>();
-		ArrayList<GoodsInfo>  form1al = new ArrayList<GoodsInfo>();
+	public  ArrayList<GoodsInfo> getShow() {
+		ArrayList<GoodsInfo>  al = new ArrayList<GoodsInfo>();
+		ProductBean productBean = new ProductBean();
 		try{
-			for(int i=0;i<2;i++){
+				Connection con = null;
+				con = conDB.getConnection();
 				GoodsInfo goodsInfo = new GoodsInfo();
-				goodsInfo.setProductCode("70010102"+i);
-				goodsInfo.setBrandMainCode("aa"+i);
-				form1List.add(goodsInfo);
-				form1al.add(goodsInfo);
-			}
-				//logger.info(gson.toJson(historyLoadList));
+				productBean.selectWhere("");
+				for(int at=0;at<productBean.getSize();at++){
+					goodsInfo.setBrandProductId(productBean.getProductIdAt(at));
+					goodsInfo.setDeleteFlag(productBean.getDeleteFlagAt(at));
+					goodsInfo.setPriceCost(productBean.getPriceCostAt(at));
+					goodsInfo.setPriceSale(productBean.getPriceSaleAt(at));
+					goodsInfo.setProductDateExpire(productBean.getProductDateExpireAt(at));
+					goodsInfo.setProductDateStart(productBean.getProductDateStartAt(at));
+					goodsInfo.setProductDesc(productBean.getProductDescAt(at));
+					goodsInfo.setProductId(productBean.getProductIdAt(at));
+					goodsInfo.setProductItem(productBean.getProductItemAt(at));
+					goodsInfo.setProductName(productBean.getProductNameAt(at));
+					goodsInfo.setTypeProductId(productBean.getTypeProductIdAt(at)+"");
+					al.add(goodsInfo);					
+				}
+				
+
 		} catch (Exception e) {		
 			e.printStackTrace();
 		} finally{			
@@ -33,8 +48,7 @@ public class ProductService {
 
 	         }catch(Exception e){	                 
 	         }
-//	         return form1List;
-	         return form1al;
+	         return al;
 		}		
 		
 	}

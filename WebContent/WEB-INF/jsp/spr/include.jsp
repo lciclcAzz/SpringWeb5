@@ -40,7 +40,8 @@
 	var container = parent.document.getElementById("container");
  	var progressBar = parent.document.getElementById("progress-bar");
 
- 	$(document).ready(function() {    
+ 	$(document).ready(function() {   
+ 	 
  		if( container == null || typeof container == 'undefined'){
       		progressBar = document.getElementById("progressBarHelp"); 
       				 

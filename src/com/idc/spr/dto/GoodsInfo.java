@@ -3,223 +3,85 @@ package com.idc.spr.dto;
 import java.io.Serializable;
 
 public class GoodsInfo implements Serializable{
-	 	private static final long serialVersionUID =1L;
-    private String productCode = null;
-    private String groupId = null;
-    private String dutyCode = null;
-    private String typeCode = null;
-    private String subTypeCode = null;
-    private String brandMainCode = null;
-    private String brandMainDesc_TH = null;
-    private String brandMainDesc_EN = null;
-    private String brandSecondCode = null;
-    private String brandSecondDesc_TH = null;
-    private String brandSecondDesc_EN = null;
-    private String modelCode = null;
-    private String modelDesc = null;
-    private String sizeCode = null;
-    private String sizeDesc = null;
-    private String packageCode = null;
-    private String packageDesc = null;
-    private String unitCode = null; 
-    private String unitDesc = null;
-    private String degreeCode= null;
-    private String degreeDesc = null;
-    private String degreeMax = null;
-    private String degreeMin = null;
-    
-    public GoodsInfo(){
-        
-    }
-
-
-
-
-	public String getGroupId() {
-		return groupId;
+	private static final long serialVersionUID =1L;
+	private String productId;
+	private String productName;
+	private String typeProductId;
+	private String brandProductId;
+	private double priceCost;
+	private double priceSale;
+	private int productItem;
+	private String productDateStart;
+	private String productDateExpire;
+	private String productDesc;
+	private String deleteFlag;
+	public String getProductId() {
+		return productId;
 	}
-
-	public void setGroupId(String groupId) {
-		this.groupId = groupId;
+	public void setProductId(String productId) {
+		this.productId = productId;
 	}
-
-	public String getDutyCode() {
-		return dutyCode;
+	public String getProductName() {
+		return productName;
 	}
-
-	public void setDutyCode(String dutyCode) {
-		this.dutyCode = dutyCode;
+	public void setProductName(String productName) {
+		this.productName = productName;
 	}
-
-	public String getTypeCode() {
-		return typeCode;
+	public String getTypeProductId() {
+		return typeProductId;
 	}
-
-	public void setTypeCode(String typeCode) {
-		this.typeCode = typeCode;
+	public void setTypeProductId(String typeProductId) {
+		this.typeProductId = typeProductId;
 	}
-
-	public String getSubTypeCode() {
-		return subTypeCode;
+	public String getBrandProductId() {
+		return brandProductId;
 	}
-
-	public void setSubTypeCode(String subTypeCode) {
-		this.subTypeCode = subTypeCode;
+	public void setBrandProductId(String brandProductId) {
+		this.brandProductId = brandProductId;
 	}
-
-	public String getBrandMainCode() {
-		return brandMainCode;
+	public double getPriceCost() {
+		return priceCost;
 	}
-
-	public void setBrandMainCode(String brandMainCode) {
-		this.brandMainCode = brandMainCode;
+	public void setPriceCost(double priceCost) {
+		this.priceCost = priceCost;
 	}
-
-	public String getBrandMainDesc_TH() {
-		return brandMainDesc_TH;
+	public double getPriceSale() {
+		return priceSale;
 	}
-
-	public void setBrandMainDesc_TH(String brandMainDesc_TH) {
-		this.brandMainDesc_TH = brandMainDesc_TH;
+	public void setPriceSale(double priceSale) {
+		this.priceSale = priceSale;
 	}
-
-	public String getBrandMainDesc_EN() {
-		return brandMainDesc_EN;
+	public int getProductItem() {
+		return productItem;
 	}
-
-	public void setBrandMainDesc_EN(String brandMainDesc_EN) {
-		this.brandMainDesc_EN = brandMainDesc_EN;
+	public void setProductItem(int productItem) {
+		this.productItem = productItem;
 	}
-
-	public String getBrandSecondCode() {
-		return brandSecondCode;
+	public String getProductDateStart() {
+		return productDateStart;
 	}
-
-	public void setBrandSecondCode(String brandSecondCode) {
-		this.brandSecondCode = brandSecondCode;
+	public void setProductDateStart(String productDateStart) {
+		this.productDateStart = productDateStart;
 	}
-
-	public String getBrandSecondDesc_TH() {
-		return brandSecondDesc_TH;
+	public String getProductDateExpire() {
+		return productDateExpire;
 	}
-
-	public void setBrandSecondDesc_TH(String brandSecondDesc_TH) {
-		this.brandSecondDesc_TH = brandSecondDesc_TH;
+	public void setProductDateExpire(String productDateExpire) {
+		this.productDateExpire = productDateExpire;
 	}
-
-	public String getBrandSecondDesc_EN() {
-		return brandSecondDesc_EN;
+	public String getProductDesc() {
+		return productDesc;
 	}
-
-	public void setBrandSecondDesc_EN(String brandSecondDesc_EN) {
-		this.brandSecondDesc_EN = brandSecondDesc_EN;
+	public void setProductDesc(String productDesc) {
+		this.productDesc = productDesc;
 	}
-
-	public String getModelCode() {
-		return modelCode;
+	public String getDeleteFlag() {
+		return deleteFlag;
 	}
-
-	public void setModelCode(String modelCode) {
-		this.modelCode = modelCode;
+	public void setDeleteFlag(String deleteFlag) {
+		this.deleteFlag = deleteFlag;
 	}
-
-	public String getModelDesc() {
-		return modelDesc;
-	}
-
-	public void setModelDesc(String modelDesc) {
-		this.modelDesc = modelDesc;
-	}
-
-	public String getSizeCode() {
-		return sizeCode;
-	}
-
-	public void setSizeCode(String sizeCode) {
-		this.sizeCode = sizeCode;
-	}
-
-	public String getSizeDesc() {
-		return sizeDesc;
-	}
-
-	public void setSizeDesc(String sizeDesc) {
-		this.sizeDesc = sizeDesc;
-	}
-
-	public String getPackageCode() {
-		return packageCode;
-	}
-
-	public void setPackageCode(String packageCode) {
-		this.packageCode = packageCode;
-	}
-
-	public String getPackageDesc() {
-		return packageDesc;
-	}
-
-	public void setPackageDesc(String packageDesc) {
-		this.packageDesc = packageDesc;
-	}
-
-	public String getUnitCode() {
-		return unitCode;
-	}
-
-	public void setUnitCode(String unitCode) {
-		this.unitCode = unitCode;
-	}
-
-	public String getUnitDesc() {
-		return unitDesc;
-	}
-
-	public void setUnitDesc(String unitDesc) {
-		this.unitDesc = unitDesc;
-	}
-
-	public String getDegreeCode() {
-		return degreeCode;
-	}
-
-	public void setDegreeCode(String degreeCode) {
-		this.degreeCode = degreeCode;
-	}
-
-	public String getDegreeDesc() {
-		return degreeDesc;
-	}
-
-	public void setDegreeDesc(String degreeDesc) {
-		this.degreeDesc = degreeDesc;
-	}
-
-	public String getDegreeMax() {
-		return degreeMax;
-	}
-
-	public void setDegreeMax(String degreeMax) {
-		this.degreeMax = degreeMax;
-	}
-
-	public String getDegreeMin() {
-		return degreeMin;
-	}
-
-	public void setDegreeMin(String degreeMin) {
-		this.degreeMin = degreeMin;
-	}
-
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	public String getProductCode() {
-		return productCode;
-	}
-	public void setProductCode(String productCode) {
-		this.productCode = productCode;
-	}
-
-
 }

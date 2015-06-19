@@ -43,6 +43,7 @@ public class form1Controller {
 		
 		RtnForm1.setDateFrom(dateFrom);
 		RtnForm1.setDateTo(dateTo);
+		
 //		model.addAttribute("form1", RtnForm1);
 		model.addAttribute("form1", RtnForm1);
 	   return "spr/index";

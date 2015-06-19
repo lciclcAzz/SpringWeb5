@@ -16,14 +16,12 @@ public class Form1Service {
 	@SuppressWarnings("finally")
 	public  ArrayList<GoodsInfo> getForm1All() {
 		Gson gson = new Gson();
-		List<GoodsInfo>  form1List = new ArrayList<GoodsInfo>();
 		ArrayList<GoodsInfo>  form1al = new ArrayList<GoodsInfo>();
 		try{
 			for(int i=0;i<2;i++){
 				GoodsInfo goodsInfo = new GoodsInfo();
-				goodsInfo.setProductCode("70010102"+i);
-				goodsInfo.setBrandMainCode("aa"+i);
-				form1List.add(goodsInfo);
+				goodsInfo.setProductId("70010102"+i);
+				goodsInfo.setProductName("aa"+1);
 				form1al.add(goodsInfo);
 			}
 				//logger.info(gson.toJson(historyLoadList));

@@ -7,6 +7,7 @@ import javax.servlet.http.HttpSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -23,7 +24,8 @@ import com.idc.spr.form.form1;
 import com.idc.spr.services.Form1Service;
 import com.idc.spr.services.ProductService;
 import com.idc.utils.Tools;
-
+@Controller
+@RequestMapping("/productForm")
 public class ProductController {
 	private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
 	
@@ -34,11 +36,11 @@ public class ProductController {
    public String doGet(HttpSession session, Model model) {
     	logger.info("form1Controller : doGet");
 		ProductForm RtnForm1 = new ProductForm();
-		ArrayList<ProductForm> al = new ArrayList<ProductForm>();
+		ArrayList<GoodsInfo> al = new ArrayList<GoodsInfo>();
 		String dateFrom =Tools.chkNull("");
 		String dateTo 	=Tools.chkNull(""); 
-		al =(ArrayList) productService.getForm1All();
-		RtnForm1.setAl(al);
+		al = productService.getShow();
+		RtnForm1.setAl(al); 
 
 		model.addAttribute("productForm", RtnForm1);
 	   return "spr/product";
@@ -49,12 +51,13 @@ public class ProductController {
 			BindingResult result,SessionStatus status,HttpSession session, Model model)throws Exception{
     	logger.info("productForm : doPOST");
 		ProductForm RtnForm1 = new ProductForm();
-		ArrayList<ProductForm> al = new ArrayList<ProductForm>();
-		al =(ArrayList) productService.getForm1All();
+		
+		ArrayList<GoodsInfo> al = new ArrayList<GoodsInfo>();
+		al = productService.getShow();
 		RtnForm1.setAl(al);
 
 		model.addAttribute("productForm", RtnForm1);
-	   return "spr/product";
+	   return "spr/index";
 	}
 //	@RequestMapping(value="getData",  method=RequestMethod.GET, produces={"application/json; charset=TIS-620"})
 //	public @ResponseBody String getData(@RequestParam  String id) {
