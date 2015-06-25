@@ -2,10 +2,10 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
-<%@ page contentType="text/html; charset=TIS-620" pageEncoding="TIS-620"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
 <head>
-<meta content="text/html; charset=TIS-620" http-equiv="Content-Type">
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 <meta content="no-cache" http-equiv="Cache-Control">
 <meta content="0" http-equiv="Expires">
 <%@ include file="include.jsp" %>
@@ -46,7 +46,7 @@
 		h = h - 134;	
 		document.getElementById("detail").height = h;
 		
-//		showMenuName("ERPSSI001","โปรแกรม ERPSSI001:สอบถามข้อมูลโครงการ EGP");
+//		showMenuName("ERPSSI001","เนเธเธฃเนเธเธฃเธก ERPSSI001:เธชเธญเธเธ–เธฒเธกเธเนเธญเธกเธนเธฅเนเธเธฃเธเธเธฒเธฃ EGP");
 //		document.getElementById("detail").src = "erpss/erpssi001";
 	}
 
@@ -130,95 +130,40 @@ var nAgt = navigator.userAgent;
 </style>
 </head>
 <body>
-	<form:form id="form1" method="POST"	action="${contextPath}/productForm"	commandName="form1">
+	<form:form id="form1" method="POST"	action="${contextPath}/form1"	commandName="form1">
         <div class="container">
            
             <div class ="row">
                 <table class="table table-hover table-bordered table-responsive table-striped">
                     <thead>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Age</th>
-                            <th>Tel.</th>
+                            <th  class="info">#</th>
+                            <th  class="info">Name</th>
+                            <th  class="info">Age</th>
+                            <th  class="info">Tel.</th>
                         </tr>
                     </thead>
                     <tbody>
+				    <c:if test="${fn:length(form1.form1al) > 0}" >
+				    	<c:forEach items="${form1.form1al}" var="form1Load" varStatus="loop">
+				    	<tr >
+							<td><c:out value="${form1Load.productId}"/></td>
+							<td class="center"><c:out value="${form1Load.productName}"/></td>
+							<td class="left"></td>
+						</tr>
+				    	</c:forEach>
+				    </c:if>                    
                         <tr class="success">
                             <td id="prdCode0">..</td>
-                            <td>.....</td>
-                            <td>.....</td>
-                            <td>.....</td>
-                        </tr>
-                        <tr class="info">
                             <td id="prdCode1">.....</td>
-                            <td>.....</td>
-                            <td>.....</td>
-                            <td>.....</td>
-                        </tr>
-                        <tr class="active">
-                            <td>active</td>
-                            <td id="prdCode">.....</td>
-                            <td>.....</td>
-                            <td>.....</td>
-                        </tr>
-                        <tr class="warning">
-                            <td id="brandMain">.....</td>
-                            <td>.....</td>
-                            <td>.....</td>
-                            <td>.....</td>
-                        </tr>                        
+                            <td id="prdCode2">.....</td>
+                            <td id="prdCode3">.....</td>
+                        </tr>                    
                     </tbody>
                 </table>            	
             </div>
-       </div>
-${productForm}
+       </div>   
 <input type="submit" value="ok" />
 <input type="button" value="GetData" name="btnGetData" id="btnGetData" />
-									<div class="demo_jui">
-<table cellpadding="0" cellspacing="0" border="0" class="display" id="example">
-	<thead>
-		<tr>
-			<th width="8%">เวลาเริ่มต้น</th>
-			<th width="8%">เวลาสิ้นสุด</th>
-			<th width="14%">ประเภท</th>
-		</tr>
-	</thead>
-	<tbody>
-	    <c:if test="${fn:length(form1.form1al) > 0}" >
-	    	<c:forEach items="${form1.form1al}" var="form1Load" varStatus="loop">
-	    	<tr >
-				<td><c:out value="${form1Load.productCode}"/></td>
-				<td class="center"><c:out value="${form1Load.brandMainCode}"/></td>
-				<td class="left"></td>
-			</tr>
-	    	</c:forEach>
-	    </c:if>
-
-	</tbody>
-</table>
-<table cellpadding="0" cellspacing="0" border="0" class="display" id="example2">
-	<thead>
-		<tr>
-			<th width="8%">เวลาเริ่มต้น</th>
-			<th width="8%">เวลาสิ้นสุด</th>
-			<th width="14%">ประเภท</th>
-		</tr>
-	</thead>
-	<tbody>
-	    <c:if test="${fn:length(productForm.al) > 0}" >
-	    	<c:forEach items="${productForm.al}" var="form1" varStatus="loop">
-	    	<tr >
-				<td><c:out value="${form1.productId}"/></td>
-				<td class="center"><c:out value="${form1.productName}"/></td>
-				<td class="left"><c:out value="${form1.priceSale}"/></td>
-			</tr>
-	    	</c:forEach>
-	    </c:if>
-
-	</tbody>
-</table>
-	    ${form1.form1List}
-			</div>
 	<div id="dialog" title="Message" style="display: none">
 		<div id="message"></div>
 	</div>

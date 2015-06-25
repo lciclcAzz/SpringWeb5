@@ -42,10 +42,10 @@ $(document).ready(function() {
 		$.getJSON("form1/getData", {id: id}, 
 				function(json) {		
 					if ( jQuery.trim(json.msgCode=="FOUND")) {
-						$('#prdCode').text(json.form1List[0].productCode);
-						$.each(json.form1List,function(idx,val,val2){
+						$('#prdCode').text(json.form1List[0].productId);
+						$.each(json.form1List,function(idx,val){
 							if(idx >= 0){
-								$('#prdCode'+idx).text(val.productCode);
+								$('#prdCode'+idx).text(val.productId);
 							}
 						});
 					}

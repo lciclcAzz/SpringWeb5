@@ -43,7 +43,7 @@ public class ProductController {
 		RtnForm1.setAl(al); 
 
 		model.addAttribute("productForm", RtnForm1);
-	   return "spr/product";
+	   return "spr/SPRProduct";
    }
     
 	@RequestMapping(method = RequestMethod.POST)
@@ -57,7 +57,7 @@ public class ProductController {
 		RtnForm1.setAl(al);
 
 		model.addAttribute("productForm", RtnForm1);
-	   return "spr/index";
+	   return "spr/SPRProduct";
 	}
 //	@RequestMapping(value="getData",  method=RequestMethod.GET, produces={"application/json; charset=TIS-620"})
 //	public @ResponseBody String getData(@RequestParam  String id) {

@@ -51,7 +51,7 @@ public class form1Controller {
     
 	@RequestMapping(method = RequestMethod.POST)
 	public String processSubmit(@ModelAttribute("form1") form1 form1 ,
-			BindingResult result,SessionStatus status,HttpSession session)throws Exception{
+			BindingResult result,SessionStatus status,HttpSession session, Model model)throws Exception{
 		form1 rtnForm1 = new form1();
 		ArrayList<GoodsInfo> al = new ArrayList<GoodsInfo>();
 		String dateFrom =Tools.chkNull(form1.getDateFrom());
@@ -61,7 +61,7 @@ public class form1Controller {
 		rtnForm1.setForm1al(al);
 		rtnForm1.setDateFrom(dateFrom);
 		rtnForm1.setDateTo(dateTo);
-//		model.addAttribute("form1", RtnForm1);
+		model.addAttribute("form1", rtnForm1);
 		
 		return "spr/index";
 	}

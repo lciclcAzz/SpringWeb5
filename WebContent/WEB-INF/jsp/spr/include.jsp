@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=TIS-620" pageEncoding="TIS-620"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%//@ page import="com.pccth.rtn.erpss.dto.SsoDataDTO"%>
 
 	<head>
@@ -7,22 +7,31 @@
 
 
 	
-	<link rel="stylesheet" type="text/css"  href='<c:url value="/resources/css/jquery-ui/start/jquery-ui-1.10.1.custom.min.css"/>'/>
-	<link rel="stylesheet" tyep="text/css" href='<c:url value="/resources/css/bootstrap.css"/>'>
+	<link rel="stylesheet" type="text/css"  href='<c:url value="./resources/css/jquery-ui/start/jquery-ui-1.10.1.custom.min.css"/>'/>
+	<link rel="stylesheet" type="text/css" href='<c:url value="./resources/css/bootstrap.css"/>'>
+	<link rel="stylesheet" type="text/css" href='<c:url value="./resources/css/font-awesome.css"/>'>	
 	
-	<script type='text/javascript' src='<c:url value="/resources/js/bootstrap.min.js"/>'></script>	
-	<script type='text/javascript' src='<c:url value="/resources/js/jquery-1.9.1.js"/>'></script>	 
-	<script type='text/javascript' src='<c:url value="/resources/js/jquery.dataTables.js"/>'></script>	
-	<script type='text/javascript' src='<c:url value="/resources/js/jquery-ui.js"/>'></script>
-	<script type='text/javascript' src='<c:url value="/resources/js/script_menu.js"/>'></script>
-	<script type='text/javascript' src='<c:url value="/resources/js/jquery.hotkeys-0.7.9.min.js"/>'></script>
-	<script type='text/javascript' src='<c:url value="/resources/js/Tools.js"/>'></script>	
-	<script type='text/javascript' src='<c:url value="/resources/js/ErrorWarning.js"/>'></script>
-	<script type='text/javascript' src='<c:url value="/resources/js/jquery.ui.datepicker.th.js"/>'></script>
-	<script type='text/javascript' src='<c:url value="/resources/js/jquery.dataTables.min.js"/>'></script>
-	<script type='text/javascript' src='<c:url value="/resources/js/jquery.dataTables.grouping.js"/>'></script>
-	<script type='text/javascript' src='<c:url value="/resources/js/jquery.validate.js"/>'></script>
-	<script type='text/javascript' src='<c:url value="/resources/js/jquery.pccth.common.js"/>'></script>
+	<link rel="stylesheet" type="text/css" href='<c:url value="./resources/xdb/css/AdminLTE.css"/>'>
+	<link rel="stylesheet" type="text/css" href='<c:url value="./resources/xdb/css/AdminLTE.min.css"/>'>
+	<link rel="stylesheet" type="text/css" href='<c:url value="./resources/xdb/css/skins/skin-blue.css"/>'>	
+	<script type='text/javascript' src='<c:url value="./resources/xdb/js/app.js"/>'></script>
+	<script type='text/javascript' src='<c:url value="./resources/xdb/js/app.min.js"/>'></script>
+	<script type='text/javascript' src='<c:url value="./resources/xdb/js/demo.js"/>'></script>		
+
+	
+	<script type='text/javascript' src='<c:url value="./resources/js/bootstrap.js"/>'></script>	
+	<script type='text/javascript' src='<c:url value="./resources/js/jquery-1.9.1.js"/>'></script>	 
+	<script type='text/javascript' src='<c:url value="./resources/js/jquery.dataTables.js"/>'></script>	
+	<script type='text/javascript' src='<c:url value="./resources/js/jquery-ui.js"/>'></script>
+	<script type='text/javascript' src='<c:url value="./resources/js/script_menu.js"/>'></script>
+	<script type='text/javascript' src='<c:url value="./resources/js/jquery.hotkeys-0.7.9.min.js"/>'></script>
+	<script type='text/javascript' src='<c:url value="./resources/js/Tools.js"/>'></script>	
+	<script type='text/javascript' src='<c:url value="./resources/js/ErrorWarning.js"/>'></script>
+	<script type='text/javascript' src='<c:url value="./resources/js/jquery.ui.datepicker.th.js"/>'></script>
+	<script type='text/javascript' src='<c:url value="./resources/js/jquery.dataTables.min.js"/>'></script>
+	<script type='text/javascript' src='<c:url value="./resources/js/jquery.dataTables.grouping.js"/>'></script>
+	<script type='text/javascript' src='<c:url value="./resources/js/jquery.validate.js"/>'></script>
+	<script type='text/javascript' src='<c:url value="./resources/js/jquery.pccth.common.js"/>'></script>
 
 	 </head>
 	
